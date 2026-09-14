@@ -1,0 +1,16 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+@theme {
+  --color-cod-gray: #1c1b1b;
+  --color-kabul: #594139;
+  --color-ebb: #e5e2e1;
+  --color-burning-orange: #ff6b35;
+  --color-cavern-pink: #e1bfb5;
+  --color-fire: #ab3500;
+  --color-global-sand: #f5f5f5;
+  --color-vista-white: #fcf9f8;
+}
