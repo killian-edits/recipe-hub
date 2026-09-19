@@ -6,7 +6,10 @@ const SignInScreen = () => {
 
   return (
     <View>
-      <Image source={require("@/assets/images/hero.png")} className="w-full" />
+      <Image
+        source={require("@/assets/images/hero.png")}
+        style={{ width: "100%", resizeMode: "cover" }}
+      />
       <View className="-mt-12 h-full bg-white rounded-tr-[3rem] rounded-tl-[3rem] p-8 mb-16">
         <View className="flex gap-2 items-center">
           <Text className="text-center text-cod-gray text-4xl font-bold">
@@ -25,7 +28,7 @@ const SignInScreen = () => {
           >
             <Image
               source={require("@/assets/images/google.png")}
-              className="w-5 h-5"
+              style={{ width: 20, height: 20 }}
             />
             <Text className="text-base font-semibold text-cod-gray">
               Continue with Google

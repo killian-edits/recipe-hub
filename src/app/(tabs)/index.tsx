@@ -1,5 +1,7 @@
 import SafeAreaView from "@/components/SafeAreaView";
-import { Text, View } from "react-native";
+import { Image, Button, Text, View } from "react-native";
+import { router } from "expo-router";
+import { useAuth } from "@clerk/expo";
 
 const HomeScreen = () => {
   return (
