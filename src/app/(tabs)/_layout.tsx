@@ -15,7 +15,7 @@ export default function AuthRoutesLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "#AB3500",
+        tabBarActiveTintColor: "#ff6232",
         tabBarInactiveTintColor: "#8E8E93",
         tabBarLabelStyle: {
           fontSize: 12,
