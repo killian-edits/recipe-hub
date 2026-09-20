@@ -60,10 +60,10 @@ const fetchRecipeDetails = async (recipeId: string) => {
   try {
     const url = `${BASE_URL}/detail/${recipeId}`;
     const response = await fetch(url);
-    const data = response.json();
+    const data = await response.json();
     const parsedData = convertKeysToCamelCase(data);
 
-    return data;
+    return parsedData;
   } catch (error) {
     console.log("Error while fetching recipe details", error);
   }

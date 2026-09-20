@@ -2,7 +2,7 @@ import SafeAreaView from "@/components/SafeAreaView";
 import { Image, Button, Text, View, ScrollView, Pressable } from "react-native";
 import { useEffect, useState } from "react";
 import { IRecipe } from "@/types/recipes.types";
-import { fetchAllRecipes } from "../../../recipes.services";
+import { fetchAllRecipes } from "../../services/recipes.services";
 import { LinearGradient } from "expo-linear-gradient";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
