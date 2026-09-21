@@ -4,6 +4,6 @@ const OAUTH = {
   OAUTH_APPLE: "oauth_apple",
 };
 
-const BASE_URL = "http://192.168.100.6:3001/api";
+const BASE_URL = "https://recipe-hub-backend-omega.vercel.app/api";
 
 export { OAUTH, BASE_URL };
