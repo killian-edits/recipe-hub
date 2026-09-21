@@ -69,9 +69,25 @@ const fetchRecipeDetails = async (recipeId: string) => {
   }
 };
 
+const fetchDeleteFavorites = async (userId: string, recipeId: number) => {
+  try {
+    const url = `${BASE_URL}/delete-favorites/${userId}/${Number(recipeId)}`;
+    const response = await fetch(url, {
+      method: "DELETE",
+    });
+    const data = await response.json();
+    const parsedData = convertKeysToCamelCase(data);
+
+    return parsedData;
+  } catch (error) {
+    console.log("Error while fetching deleting recipe", error);
+  }
+};
+
 export {
   fetchAllRecipes,
   fetchAddToFavorites,
   fetchUserFavoritesRecipes,
   fetchRecipeDetails,
+  fetchDeleteFavorites,
 };

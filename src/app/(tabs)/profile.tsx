@@ -1,14 +1,7 @@
-import SafeAreaView from "@/components/SafeAreaView";
-import { View, Text } from "react-native";
+import { UserProfileView } from "@clerk/expo/native";
 
 const ProfileScreen = () => {
-  return (
-    <SafeAreaView>
-      <View>
-        <Text>Profile Screen</Text>
-      </View>
-    </SafeAreaView>
-  );
+  return <UserProfileView />;
 };
 
 export default ProfileScreen;
