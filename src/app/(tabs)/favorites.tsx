@@ -31,15 +31,18 @@ const FavoritesScreen = () => {
   };
 
   const handleDeleteFavorites = async (id: number) => {
-    if (!user) return null;
+    if (!user) return;
+
+    // 1. Optimistically remove from screen UI immediately
+    setFavoritesList((prev) => prev.filter((item) => item.recipeId !== id));
 
     try {
       await fetchDeleteFavorites(user.id, id);
     } catch (error) {
       console.log("Error while deleting favorite recipe", error);
+      // 2. Re-fetch if API call fails to restore state
+      handleFetchFavoritesRecipes();
     }
-
-    handleFetchFavoritesRecipes();
   };
 
   const handleNavigation = (id: string) => {
@@ -61,10 +64,10 @@ const FavoritesScreen = () => {
         </Text>
 
         <View className="mt-8 flex gap-8 pb-24">
-          {favoritesList.map((recipe, index) => {
+          {favoritesList.map((recipe) => {
             return (
               <Pressable
-                key={index}
+                key={recipe.recipeId}
                 onPress={() => handleNavigation(String(recipe.recipeId))}
                 className="relative rounded-xl bg-white shadow overflow-hidden"
               >
